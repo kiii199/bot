@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 import yt_dlp
 import asyncio
@@ -88,4 +89,5 @@ async def search_and_play(ctx, *, search: str):
         await ctx.send(f"❌ 음악 재생 중 오류가 발생했습니다: {e}")
 
 # 여기에 디스코드 봇 토큰 입력
-bot.run("MTM4OTczNTQ3NDY0MTI0NDE2MQ.GhKCap.8_qwaKJgArLnDo6ufbnvTWcUS2yangxtl2eN0s")
+access_token = os.environ ["BOT_TOKEN"]
+client.run(access_token)
